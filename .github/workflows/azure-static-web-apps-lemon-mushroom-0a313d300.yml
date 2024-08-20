@@ -28,9 +28,23 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/src" # App source code path
+          
+          ################ original file directories created below ################
+          # app_location: "/src" # App source code path
+          # api_location: "api" # Api source code path - optional
+          # output_location: "/src" # Built app content directory - optional
+          ################ original file directories created above ################
+
+
+          ################ edited file directories created below 20aug2024 ################
+          ### https://learn.microsoft.com/en-us/azure/static-web-apps/add-api?tabs=vanilla-javascript
+          ### Add API location to workflow
+          app_location: "/" # App source code path
           api_location: "api" # Api source code path - optional
-          output_location: "/src" # Built app content directory - optional
+          output_location: "build" # Built app content directory - optional
+          ################ edited file directories created above 20aug2024 ################
+
+
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
